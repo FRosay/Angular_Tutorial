@@ -1,13 +1,17 @@
         /* AppComponent's private CSS styles */
         h1 {
-          font-size: 1.2em;
+          font-size: 1.8em;
           color: #999;
           margin-bottom: 0;
+          text-align: center;
         }
         h2 {
           font-size: 2em;
           margin-top: 0;
           padding-top: 0;
+        }
+        nav {
+          text-align: center;
         }
         nav a {
           padding: 5px 10px;

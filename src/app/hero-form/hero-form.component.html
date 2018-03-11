@@ -1,0 +1,55 @@
+<h3>Nouveau personnage :</h3>
+
+<form [formGroup]="heroForm">
+
+  <div class="form-group">
+    <label class="center-block">Nom :
+      <input class="form-control" formControlName="name">
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label class="center-block">Age :
+      <input class="form-control" formControlName="age">
+    </label>
+  </div>
+
+  <div formArrayName="traits" class="well well-lg">
+      <div *ngFor="let trait of traits.controls; let i=index" [formGroupName]="i" >
+        <!-- The repeated address template -->
+        <h4>Traits #{{i + 1}}</h4>
+        <div style="margin-left: 1em;">
+          <div class="form-group">
+            <label class="center-block">Premier trait :
+              <input class="form-control" formControlName="traitone">
+            </label>
+          </div>
+          <div class="form-group">
+            <label class="center-block">Deuxième trait :
+              <input class="form-control" formControlName="traittwo">
+            </label>
+          </div>
+          <div class="form-group">
+            <label class="center-block">Troisième trait :
+              <input class="form-control" formControlName="traitthree">
+            </label>
+          </div>
+          <div class="form-group">
+            <label class="center-block">Quatrième trait:
+              <input class="form-control" formControlName="traitfour">
+            </label>
+          </div>
+        </div>
+        <br>
+        <!-- End of the repeated address template -->
+      </div>
+      <button (click)="addTrait()" type="button">Ajouter un trait</button>
+    </div>
+
+  <div class="form-group">
+      <label class="center-block">Biographie :
+        <input class="form-control" formControlName="bio">
+      </label>
+  </div>
+
+</form>

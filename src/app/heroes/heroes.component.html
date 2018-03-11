@@ -1,5 +1,6 @@
 <h2>My Heroes</h2>
 
+<div class="personnages">
 <ul class="heroes">
   <li *ngFor="let hero of heroes">
     <a routerLink="/detail/{{hero.id}}">
@@ -10,9 +11,11 @@
   </li>
 </ul>
 
+<app-hero-form></app-hero-form>
+</div>
 <!-- Add a Hero -->
 <div>
-  <label>New Hero:
+  <label>Nouveau personnage :
     <input #heroName />
   </label>
   <!-- (click) passes input value to add() and then clears the input -->
