@@ -14,37 +14,18 @@
     </label>
   </div>
 
-  <div formArrayName="traits" class="well well-lg">
-      <div *ngFor="let trait of traits.controls; let i=index" [formGroupName]="i" >
-        <!-- The repeated address template -->
-        <h4>Traits #{{i + 1}}</h4>
-        <div style="margin-left: 1em;">
-          <div class="form-group">
-            <label class="center-block">Premier trait :
-              <input class="form-control" formControlName="traitone">
-            </label>
-          </div>
-          <div class="form-group">
-            <label class="center-block">Deuxième trait :
-              <input class="form-control" formControlName="traittwo">
-            </label>
-          </div>
-          <div class="form-group">
-            <label class="center-block">Troisième trait :
-              <input class="form-control" formControlName="traitthree">
-            </label>
-          </div>
-          <div class="form-group">
-            <label class="center-block">Quatrième trait:
-              <input class="form-control" formControlName="traitfour">
-            </label>
-          </div>
-        </div>
-        <br>
-        <!-- End of the repeated address template -->
-      </div>
-      <button (click)="addTrait()" type="button">Ajouter un trait</button>
+  <div class="form-group">
+    <label class="center-block">Traits :
+      <input class="form-control" formControlName="trait1">
+      <input class="form-control" formControlName="trait2">
+      <input class="form-control" formControlName="trait3">
+      <input class="form-control" formControlName="trait4">
+      <div [innerHTML]="newTraits"></div>
+    </label>
+    <div class="one" *ngFor="let trait of MyTraits; let i = index">
+      <input class="form-control" formControlName="{{trait}}{{i}}\">"">
     </div>
+  </div>
 
   <div class="form-group">
       <label class="center-block">Biographie :

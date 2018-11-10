@@ -16,7 +16,9 @@ import { MessageService } from './message.service';
 import { AppRoutingModule } from './/app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
-import { HeroFormComponent } from './hero-form/hero-form.component'
+import { HeroFormComponent } from './hero-form/hero-form.component';
+import { StoryComponent } from './story/story.component';
+import { StoryTextComponent } from './story/story-text/story-text.component'
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { HeroFormComponent } from './hero-form/hero-form.component'
     MessagesComponent,
     DashboardComponent,
     HeroSearchComponent,
-    HeroFormComponent
+    HeroFormComponent,
+    StoryComponent,
+    StoryTextComponent
   ],
   imports: [
     BrowserModule,

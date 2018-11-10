@@ -16,20 +16,25 @@ export class HeroFormComponent implements OnInit {
     this.createForm();
   }
 
-createForm() {
-  this.heroForm = this.fb.group({
-    name: [ '', Validators.required ],
-    age: [ '', Validators.required ],
-    traits: this.fb.array([]),
-    bio: '',
-  })
-}
-
   ngOnInit() {
   }
 
+  myTraits = []
+  newTrait = "<input class=\"form-control\" formControlName=\"trait";
+
+  createForm() {
+    this.heroForm = this.fb.group({
+      name: [ '', Validators.required ],
+      age: [ '', Validators.required ],
+      traits: this.fb.array([]),
+      bio: '',
+   })
+  }
+
+ 
+
   addTrait() {
-    this.traits.push(this.fb.group(new Trait()));
+    this.myTraits.push()
   }
 
 }

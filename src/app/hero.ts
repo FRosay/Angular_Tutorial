@@ -3,7 +3,7 @@ export class Hero {
     name: string;
     bio: string;
     age: number;
-    traits: string;
+    traits: Trait[];
 }
 
 export class Trait {
